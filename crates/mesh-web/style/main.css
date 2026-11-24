@@ -321,11 +321,14 @@ h1, h2, h6, p { margin: 0; }
   opacity: 0; pointer-events: none; transition: opacity .12s;
 }
 .help:hover .help-tip, .help:focus-visible .help-tip { opacity: 1; }
-.field input {
+.field input:not(.slider) {
   width: 96px; height: 34px; padding: 0 10px; background: #0d0d0f; color: var(--text);
   border: 1px solid var(--border-strong); border-radius: 8px; font-family: var(--mono);
 }
 .field input:focus { outline: 2px solid #25503d; border-color: var(--accent); }
+.field .slider { width: 180px; height: 34px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.field .slider.inherited { opacity: .45; }
+.field .slider:disabled { cursor: default; opacity: .4; }
 .unit { color: var(--text-muted); }
 .editor .field { max-width: 560px; }
 .model-patterns {
